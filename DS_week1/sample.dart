@@ -53,28 +53,38 @@
 //   list.display();
 // }
 
-class BubbleSort {
-  static void sort(List<int> a) {
-    int n = a.length;
+// class Node {
+//   dynamic data;
+//   Node? next;
+//   Node(this.data);
+// }
 
-    for (int i = 0; i < n - 1; i++) {
-      for (int j = 0; j < n - 1 - i; j++) {
-        if (a[j] > a[j + 1]) {
-          int temp = a[j];
-          a[j] = a[j + 1];
-          a[j + 1] = temp;
-        }
-      }
-    }
-  }
-}
+// class LinkedList {
+//   Node? head;
+//   Node? tail;
+//   void add(dynamic data) {
+//     Node? newNode = Node(data);
+//     if (head == null) {
+//       head = newNode;
+//     } else {
+//       tail?.next = newNode;
+//     }
+//     tail = newNode;
+//   }
 
-void main() {
-  List<int> numbers = [5, 2, 8, 1, 9, 3];
+//   void display() {
+//     Node? currentNode = head;
+//     while (currentNode != null) {
+//       print(currentNode.data);
+//       currentNode = currentNode.next;
+//     }
+//   }
+// }
 
-  print("Before sorting: $numbers");
-
-  BubbleSort.sort(numbers);
-
-  print("After sorting: $numbers");
-}
+// void main() {
+//   var list = LinkedList();
+//   list.add(10);
+//   list.add(20);
+//   list.add(30);
+//   list.display();
+// }

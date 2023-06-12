@@ -55,19 +55,38 @@
 //   }
 // }
 
+// void main() {
+//   List<int> a = [6, 3, 6, 2, 7, 1, 89];
+//   bubbleSort(a);
+//   print("after sorting$a");
+// }
+
+// bubbleSort(List<int> a) {
+//   int n = a.length - 1;
+
+//   for (var i = 0; i < n; i++) {
+//     for (var j = 0; j < n - i; j++) {
+//       if (a[j] > a[j + 1]) {
+//         int temp = a[j];
+//         a[j] = a[j + 1];
+//         a[j + 1] = temp;
+//       }
+//     }
+//   }
+// }
+
 void main() {
-  List<int> a = [6, 3, 6, 2, 7, 1, 89];
+  List<int> a = [12, 3, 4, 5, 1, 2, 8, 9];
   bubbleSort(a);
-  print("after sorting$a");
+  print(a);
 }
 
 bubbleSort(List<int> a) {
   int n = a.length - 1;
-
   for (var i = 0; i < n; i++) {
-    for (var j = 0; j < n - i; j++) {
+    for (var j = 0; j < n; j++) {
       if (a[j] > a[j + 1]) {
-        int temp = a[j];
+        var temp = a[j];
         a[j] = a[j + 1];
         a[j + 1] = temp;
       }

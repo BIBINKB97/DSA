@@ -77,21 +77,21 @@
 //   }
 // }
 
-// void main() {
-//   List<int> a = [23, 4, 5, 7, 6, 5];
-//   insertionSort(a);
-//   print("after sorting $a");
-// }
+void main() {
+  List<int> a = [23, 4, 5, 7, 6, 5];
+  insertionSort(a);
+  print("after sorting $a");
+}
 
-// void insertionSort(List<int> a) {
-//   int n = a.length;
-//   for (var i = 1; i < n; i++) {
-//     var temp = a[i];
-//     var j = i - 1;
-//     while (j >= 0 && a[j] > temp) {
-//       a[j + 1] = a[j];
-//       j--;
-//     }
-//     a[j + 1] = temp;
-//   }
-// }
+void insertionSort(List<int> a) {
+  int n = a.length;
+  for (var i = 1; i < n; i++) {
+    var temp = a[i];
+    var j = i - 1;
+    while (j >= 0 && a[j] > temp) {
+      a[j + 1] = a[j];
+      j--;
+    }
+    a[j + 1] = temp;
+  }
+}
