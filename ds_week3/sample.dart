@@ -301,7 +301,7 @@
 //         currentNode = currentNode.left;
 //       } else  {
 //         currentNode = currentNode.right;
-//       } 
+//       }
 //     }
 //     return false;
 //   }
@@ -313,3 +313,44 @@
 //   obj.insert(20);
 //   print(obj.contains(20));
 // }
+
+class TreeNode {
+  int data;
+  TreeNode? left;
+  TreeNode? right;
+  TreeNode(this.data);
+}
+
+class binarySearchTree {
+  TreeNode? root;
+  binarySearchTree();
+  void insert(int data) {
+    TreeNode? newNode = TreeNode(data);
+    if (root == null) {
+      root = newNode;
+    } else {
+      TreeNode? currentNode = root;
+
+      while (true) {
+        if (data < currentNode!.data) {
+          if (currentNode.left == null) {
+            currentNode.left = newNode;
+          } else {
+            currentNode = currentNode.left;
+          }
+        } else {
+          if (currentNode.right == null) {
+            currentNode.right = newNode;
+          } else {
+            currentNode = currentNode.right;
+          }
+        }
+      }
+    }
+  }
+
+  bool contains(int data) {
+    TreeNode? currentNode = root;
+    
+  }
+}
