@@ -437,6 +437,78 @@
 //   print(object.contains(1));
 // }
 
+// class TreeNode {
+//   int data;
+//   TreeNode? left;
+//   TreeNode? right;
+//   TreeNode(this.data);
+// }
+
+// class binarySearchTree {
+//   TreeNode? root;
+//   binarySearchTree();
+
+//   void insert(int data) {
+//     TreeNode? newNode = TreeNode(data);
+//     if (root == null) {
+//       root = newNode;
+//     } else {
+//       TreeNode? currentNode = root;
+
+//       while (true) {
+//         if (data < currentNode!.data) {
+//           if (currentNode.left == null) {
+//             currentNode.left = newNode;
+//             break;
+//           } else {
+//             currentNode = currentNode.left;
+//           }
+//         } else {
+//           if (currentNode.right == null) {
+//             currentNode.right = newNode;
+//             break;
+//           } else {
+//             currentNode = currentNode.right;
+//           }
+//         }
+//       }
+//     }
+//   }
+
+//   bool contains(int data) {
+//     TreeNode? currentNode = root;
+//     while (currentNode != null) {
+//       if (currentNode.data == data) {
+//         return true;
+//       } else if (data < currentNode.data) {
+//         currentNode = currentNode.left;
+//       } else {
+//         currentNode = currentNode.right;
+//       }
+//     }
+//     return false;
+//   }
+
+//    void display(TreeNode? node) {
+//     if (node != null) {
+//       display(node.left);
+//       print(node.data);
+//       display(node.right);
+//     }
+//   }
+// }
+
+// void main() {
+//   binarySearchTree object = binarySearchTree();
+//   object.insert(10);
+//   object.insert(11);
+//   object.insert(40);
+//   print(object.contains(1));
+//   object.display(object.root);
+// }
+
+import 'bstree.dart';
+
 class TreeNode {
   int data;
   TreeNode? left;
@@ -444,9 +516,9 @@ class TreeNode {
   TreeNode(this.data);
 }
 
-class binarySearchTree {
+class BinarySearchTree {
   TreeNode? root;
-  binarySearchTree();
+  BinarySearchTree();
 
   void insert(int data) {
     TreeNode? newNode = TreeNode(data);
@@ -477,7 +549,7 @@ class binarySearchTree {
 
   bool contains(int data) {
     TreeNode? currentNode = root;
-    while (currentNode != null) {
+    if (currentNode != null) {
       if (currentNode.data == data) {
         return true;
       } else if (data < currentNode.data) {
@@ -488,21 +560,12 @@ class binarySearchTree {
     }
     return false;
   }
-
-   void display(TreeNode? node) {
-    if (node != null) {
-      display(node.left);
-      print(node.data);
-      display(node.right);
-    }
-  }
 }
 
 void main() {
   binarySearchTree object = binarySearchTree();
   object.insert(10);
-  object.insert(11);
-  object.insert(40);
+  object.insert(15);
+  object.insert(20);
   print(object.contains(1));
-  object.display(object.root);
 }
