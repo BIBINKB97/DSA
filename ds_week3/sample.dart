@@ -507,65 +507,257 @@
 //   object.display(object.root);
 // }
 
-import 'bstree.dart';
+// class TreeNode {
+//   int data;
+//   TreeNode? left;
+//   TreeNode? right;
+//   TreeNode(this.data);
+// }
 
-class TreeNode {
-  int data;
-  TreeNode? left;
-  TreeNode? right;
-  TreeNode(this.data);
-}
+// class BinarySearchTree {
+//   TreeNode? root;
+//   BinarySearchTree();
 
-class BinarySearchTree {
-  TreeNode? root;
-  BinarySearchTree();
+//   void insert(int data) {
+//     TreeNode? newNode = TreeNode(data);
+//     if (root == null) {
+//       root = newNode;
+//     } else {
+//       TreeNode? currentNode = root;
 
-  void insert(int data) {
-    TreeNode? newNode = TreeNode(data);
-    if (root == null) {
-      root = newNode;
-    } else {
-      TreeNode? currentNode = root;
+//       while (true) {
+//         if (data < currentNode!.data) {
+//           if (currentNode.left == null) {
+//             currentNode.left = newNode;
+//             break;
+//           } else {
+//             currentNode = currentNode.left;
+//           }
+//         } else {
+//           if (currentNode.right == null) {
+//             currentNode.right = newNode;
+//             break;
+//           } else {
+//             currentNode = currentNode.right;
+//           }
+//         }
+//       }
+//     }
+//   }
 
-      while (true) {
-        if (data < currentNode!.data) {
-          if (currentNode.left == null) {
-            currentNode.left = newNode;
-            break;
-          } else {
-            currentNode = currentNode.left;
-          }
-        } else {
-          if (currentNode.right == null) {
-            currentNode.right = newNode;
-            break;
-          } else {
-            currentNode = currentNode.right;
-          }
-        }
-      }
-    }
-  }
+//   bool contains(int data) {
+//     TreeNode? currentNode = root;
+//     if (currentNode != null) {
+//       if (currentNode.data == data) {
+//         return true;
+//       } else if (data < currentNode.data) {
+//         currentNode = currentNode.left;
+//       } else {
+//         currentNode = currentNode.right;
+//       }
+//     }
+//     return false;
+//   }
+// }
 
-  bool contains(int data) {
-    TreeNode? currentNode = root;
-    if (currentNode != null) {
-      if (currentNode.data == data) {
-        return true;
-      } else if (data < currentNode.data) {
-        currentNode = currentNode.left;
-      } else {
-        currentNode = currentNode.right;
-      }
-    }
-    return false;
-  }
-}
+// void main() {
+//   BinarySearchTree object = BinarySearchTree();
+//   object.insert(10);
 
-void main() {
-  binarySearchTree object = binarySearchTree();
-  object.insert(10);
-  object.insert(15);
-  object.insert(20);
-  print(object.contains(1));
-}
+//   print(object.contains(10));
+// }
+
+// class TreeNode {
+//   int data;
+//   TreeNode? left;
+//   TreeNode? right;
+//   TreeNode(this.data);
+// }
+
+// class binarySearchTree {
+//   TreeNode? root;
+//   binarySearchTree();
+
+//   void insert(int data) {
+//     TreeNode? newNode = TreeNode(data);
+//     if (root == null) {
+//       root = newNode;
+//     } else {
+//       TreeNode? currentNode = root;
+
+//       while (true) {
+//         if (data < currentNode!.data) {
+//           if (currentNode.left == null) {
+//             currentNode.left = newNode;
+//             break;
+//           } else {
+//             currentNode = currentNode.left;
+//           }
+//         } else {
+//           if (currentNode.right == null) {
+//             currentNode.right = newNode;
+//             break;
+//           } else {
+//             currentNode = currentNode.right;
+//           }
+//         }
+//       }
+//     }
+//   }
+
+//   bool check(int data) {
+//     TreeNode? currentNode = root;
+//     while (currentNode != null) {
+//       if (currentNode.data == data) {
+//         return true;
+//       } else if (data < currentNode.data) {
+//         currentNode = currentNode.left;
+//       } else {
+//         currentNode = currentNode.right;
+//       }
+//     }
+//     return false;
+//   }
+// }
+
+// void main() {
+//   binarySearchTree object = binarySearchTree();
+//   object.insert(11);
+//   object.insert(12);
+//   object.insert(13);
+//   object.insert(14);
+//   object.insert(15);
+//   object.insert(16);
+//   object.insert(17);
+//   print(object.check(10));
+// }
+
+// class TreeNode {
+//   int data;
+//   TreeNode? left;
+//   TreeNode? right;
+//   TreeNode(this.data);
+// }
+
+// class binarysearchTree {
+//   TreeNode? root;
+//   binarysearchTree();
+//   void insert(int data) {
+//     TreeNode? newNode = TreeNode(data);
+
+//     if (root == null) {
+//       root = newNode;
+//     } else {
+//       TreeNode? currentNode = root;
+
+//       while (true) {
+//         if (data < currentNode!.data) {
+//           if (currentNode.left == null) {
+//             currentNode.left = newNode;
+//             break;
+//           } else {
+//             currentNode = currentNode.left;
+//           }
+//         } else {
+//           if (currentNode.right == null) {
+//             currentNode.right = newNode;
+//             break;
+//           } else {
+//             currentNode = currentNode.right;
+//           }
+//         }
+//       }
+//     }
+//   }
+
+//   bool check(int data) {
+//     TreeNode? currentNode = root;
+//     while (currentNode != null) {
+//       if (currentNode.data == data) {
+//         return true;
+//       } else if (data < currentNode.data) {
+//         currentNode = currentNode.left;
+//       } else {
+//         currentNode = currentNode.right;
+//       }
+//     }
+//     return false;
+//   }
+// }
+
+// void main() {
+//   binarysearchTree object = binarysearchTree();
+//   object.insert(10);
+//   object.insert(11);
+//   object.insert(13);
+//   object.insert(14);
+//   object.insert(15);
+//   object.insert(17);
+//   print(object.check(100));
+// }
+
+// class TrieNode {
+//   bool isEndOfWord;
+//    late Map<String, TrieNode> children;
+//   TrieNode() : isEndOfWord = false {
+//     children = <String, TrieNode>{};
+//   }
+// }
+
+// class Trie {
+//   TrieNode? root;
+
+//   Trie() {
+//     root = TrieNode();
+//   }
+
+//   void insert(String word) {
+//     TrieNode? currentNode = root;
+
+//     for (int i = 0; i < word.length; i++) {
+//       String character = word[i];
+//       if (!currentNode!.children.containsKey(character)) {
+//         currentNode.children[character] = TrieNode();
+//       }
+//       currentNode = currentNode.children[character];
+//     }
+//     currentNode!.isEndOfWord = true;
+//   }
+//   bool search(String word) {
+//     TrieNode? currentNode = root;
+//     for (int i = 0; i < word.length; i++) {
+//       String character = word[i];
+//       if (!currentNode!.children.containsKey(character)) {
+//         return false;
+//       }
+//       currentNode = currentNode.children[character];
+//     }
+//     return currentNode!.isEndOfWord;
+//   }
+//   bool startsWith(String prefix) {
+//     TrieNode? currentNode = root;
+
+//     for (int i = 0; i < prefix.length; i++) {
+//       String character = prefix[i];
+//       if (!currentNode!.children.containsKey(character)) {
+//         return false;
+//       }
+//       currentNode = currentNode.children[character];
+//     }
+//     return true;
+//   }
+// }
+
+// void main(List<String> args) {
+//   Trie obj = Trie();
+//   obj.insert('apple');
+//   obj.insert("banana");
+//   obj.insert('orange');
+
+//   print(obj.search('apple'));
+//   print(obj.search('mango'));
+//   print(obj.startsWith('app'));
+//   print(obj.startsWith('ora'));
+//   print(obj.startsWith('go'));
+
+// }
