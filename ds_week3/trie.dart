@@ -1,9 +1,6 @@
 class TrieNode {
-  bool isEndOfWord;
-   late Map<String, TrieNode> children;
-  TrieNode() : isEndOfWord = false {
-    children = <String, TrieNode>{};
-  }
+  bool isEndOfWord=false;
+    Map<String, TrieNode> children={};
 }
 
 class Trie {
