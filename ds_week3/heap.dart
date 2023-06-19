@@ -1,10 +1,8 @@
 class MinHeap {
   List<int> heap = [];
-
   MinHeap() {
     heap = [];
   }
-
   void buildHeap(List<int> array) {
     heap = List.from(array);
     for (int i = parent(heap.length - 1); i >= 0; i--) {
@@ -66,7 +64,7 @@ class MinHeap {
   }
 
   void display() {
-    for (int i = 0; i < heap.length-1; i++) {
+    for (int i = 0; i < heap.length - 1; i++) {
       print(heap[i]);
     }
   }

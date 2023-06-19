@@ -4,6 +4,7 @@ class TreeNode {
   TreeNode? right;
   TreeNode(this.data);
 }
+
 class binarySearchTree {
   TreeNode? root;
 
@@ -41,14 +42,28 @@ class binarySearchTree {
     while (currentNode != null) {
       if (currentNode.data == data) {
         return true;
-      }
-      else if (data < currentNode.data) {
+      } else if (data < currentNode.data) {
         currentNode = currentNode.left;
-      } else  {
+      } else {
         currentNode = currentNode.right;
-      } 
+      }
     }
     return false;
+  }
+
+  bool isbst(TreeNode? node, int minvalue, int maxvalue) {
+    if (node == null) {
+      return true;
+    }
+    if (node.data < minvalue || node.data > maxvalue) {
+      return false;
+    }
+    return isbst(node, minvalue, node.data - 1) &&
+        isbst(node, node.data + 1, maxvalue);
+  }
+
+  bool isvalid() {
+    return isbst(root, 0, 644654764);
   }
 }
 
@@ -57,4 +72,5 @@ void main() {
   obj.insert(10);
   obj.insert(20);
   print(obj.contains(20));
+  print(obj.isvalid()); 
 }

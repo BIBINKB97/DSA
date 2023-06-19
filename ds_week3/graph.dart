@@ -1,10 +1,8 @@
 class Graph {
-  Map<int, List<int>> _adjacencyList={};
-
+  Map<int, List<int>> _adjacencyList = {};
   Graph() {
     _adjacencyList = {};
   }
-
   void addVertex(int vertex) {
     _adjacencyList[vertex] = [];
   }
@@ -34,14 +32,10 @@ class Graph {
   String toString() {
     return _adjacencyList.toString();
   }
- 
-
 }
 
 void main() {
   Graph graph = Graph();
-
-
   graph.addVertex(1);
   graph.addVertex(2);
   graph.addVertex(3);
@@ -49,11 +43,11 @@ void main() {
   graph.addEdge(1, 2);
   graph.addEdge(1, 3);
   graph.addEdge(2, 4);
-  print(graph); 
+  print(graph);
   List<int> neighbors = graph.getNeighbors(1);
-  print(neighbors); 
+  print(neighbors);
   graph.removeEdge(1, 2);
-  print(graph); 
+  print(graph);
   graph.removeVertex(4);
-  print(graph); 
+  print(graph);
 }

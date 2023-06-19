@@ -890,3 +890,62 @@
 
 // }
 
+
+
+// class TreeNode {
+//   int data;
+//   TreeNode? left;
+//   TreeNode? right;
+//   TreeNode(this.data);
+// }
+
+// class BinarySearchTree {
+//   TreeNode? root;
+//   BinarySearchTree();
+
+//   void insert(int data) {
+//     TreeNode? newNode = TreeNode(data);
+//     if (root == null) {
+//       root = newNode;
+//     } else {
+//       TreeNode? currentNode = root;
+
+//       while (true) {
+//         if (data < currentNode!.data) {
+//           if (currentNode.left == null) {
+//             currentNode.left = newNode;
+//           } else {
+//             currentNode = currentNode.left;
+//           }
+//         } else {
+//           if (currentNode.right == null) {
+//             currentNode.right = newNode;
+//           } else {
+//             currentNode = currentNode.right;
+//           }
+//         }
+//       }
+//     }
+//   }
+
+//   bool contains(int data) {
+//     TreeNode? currentNode = root;
+//     while (currentNode != null) {
+//       if (currentNode.data == data) {
+//         return true;
+//       } else if (data < currentNode.data) {
+//         currentNode = currentNode.left;
+//       } else {
+//         currentNode = currentNode.right;
+//       }
+//     }
+//     return false;
+//   }
+// }
+
+// void main() {
+//   BinarySearchTree object = BinarySearchTree();
+//   object.insert(100);
+//   object.insert(20);
+//   object.insert(50);
+// }
