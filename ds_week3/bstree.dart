@@ -51,20 +51,7 @@ class binarySearchTree {
     return false;
   }
 
-  bool isbst(TreeNode? node, int minvalue, int maxvalue) {
-    if (node == null) {
-      return true;
-    }
-    if (node.data < minvalue || node.data > maxvalue) {
-      return false;
-    }
-    return isbst(node, minvalue, node.data - 1) &&
-        isbst(node, node.data + 1, maxvalue);
-  }
-
-  bool isvalid() {
-    return isbst(root, 0, 644654764);
-  }
+ 
 }
 
 void main() {
@@ -72,5 +59,5 @@ void main() {
   obj.insert(10);
   obj.insert(20);
   print(obj.contains(20));
-  print(obj.isvalid()); 
+
 }
